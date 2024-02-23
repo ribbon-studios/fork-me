@@ -9,6 +9,8 @@
 
 # `@rain-cafe/fork-me`
 
+![example](https://github.com/rain-cafe/fork-me/assets/9692284/37b8dfad-3d35-43e2-aa23-041b174974e6)
+
 ### Usage
 
 ```tsx
