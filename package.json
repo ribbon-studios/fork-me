@@ -1,7 +1,7 @@
 {
   "name": "@rain-cafe/fork-me",
   "packageManager": "yarn@3.6.1",
-  "description": "A 'Fork Me' component built out of spite",
+  "description": "A 'Fork Me' React Component built out of spite",
   "version": "1.0.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -41,8 +41,10 @@
     "typescript": "^5.1.6"
   },
   "keywords": [
-    "GitHub",
-    "Fork Me"
+    "github",
+    "fork",
+    "me",
+    "react"
   ],
   "publishConfig": {
     "access": "public"
