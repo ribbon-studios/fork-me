@@ -1,0 +1,45 @@
+.forkMe {
+  position: fixed;
+  top: 0;
+  display: inline-flex;
+  cursor: pointer;
+
+  .arm {
+    transform-origin: 130px 106px;
+  }
+
+  .arm,
+  .body {
+    fill: currentColor;
+  }
+
+  &:hover .arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &.left {
+    left: 0;
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
