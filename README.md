@@ -26,12 +26,13 @@ export function MyApp() {
 
 ### Properties
 
-| Name            | Description                                | Optional?                 |
-| --------------- | ------------------------------------------ | ------------------------- |
-| slug            | The slug of your repository                | No                        |
-| side            | The side you'd like the octocat to appear! | Yes (defaults to `right`) |
-| backgroundColor | The ribbon color                           | Yes (defaults to `black`) |
-| color           | The octocat color                          | Yes (defaults to `white`) |
+| Name            | Description                                           | Optional?                   |
+| --------------- | ----------------------------------------------------- | --------------------------- |
+| slug            | The slug of your repository                           | No                          |
+| side            | The side you'd like the octocat to appear!            | Yes (defaults to `'right'`) |
+| backgroundColor | The ribbon color                                      | Yes (defaults to `'black'`) |
+| color           | The octocat color                                     | Yes (defaults to `'white'`) |
+| newTab          | Set this to false to make it open in the current tab. | Yes (defaults to `true`)    |
 
 [_**Want to Contribute?**_](/CONTRIBUTING.md)
 

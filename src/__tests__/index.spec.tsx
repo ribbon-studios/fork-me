@@ -17,7 +17,7 @@ describe('component(ForkMe)', () => {
 
       const anchor = component.getByTestId('fork-me') as HTMLAnchorElement;
 
-      expect(anchor.href).toContain(`https://github.com/rain-cafe/utils`);
+      expect(anchor.href).toEqual(`https://github.com/rain-cafe/utils`);
     });
   });
 
@@ -42,6 +42,24 @@ describe('component(ForkMe)', () => {
       const component = render(<ForkMe slug="rain-cafe/fork-me" color="black" />);
 
       expect(component.getByTestId('fork-me').style.fill).toEqual('black');
+    });
+  });
+
+  describe('prop(newTab)', () => {
+    it('should default to opening in a new tab', () => {
+      const component = render(<ForkMe slug="rain-cafe/fork-me" color="black" />);
+
+      const anchor = component.getByTestId('fork-me') as HTMLAnchorElement;
+
+      expect(anchor.target).toEqual('_blank');
+    });
+
+    it('should support opening in the current tab', () => {
+      const component = render(<ForkMe slug="rain-cafe/fork-me" color="black" newTab={false} />);
+
+      const anchor = component.getByTestId('fork-me') as HTMLAnchorElement;
+
+      expect(anchor.target).toEqual('');
     });
   });
 });

@@ -26,15 +26,28 @@ export type ForkMeProps = {
    * The side you'd like the octocat to appear!
    */
   side?: 'left' | 'right';
+
+  /**
+   * Set this to false to make it open in the current tab.
+   *
+   * @default true
+   */
+  newTab?: boolean;
 };
 
-export function ForkMe({ slug, backgroundColor = 'black', color = 'white', side = 'right' }: ForkMeProps) {
+export function ForkMe({
+  slug,
+  backgroundColor = 'black',
+  color = 'white',
+  side = 'right',
+  newTab = true,
+}: ForkMeProps) {
   return (
     <a
       href={`https://github.com/${slug}`}
       className={`${styles.forkMe} ${styles[side]}`}
       style={{ fill: backgroundColor, color: color }}
-      target="_blank"
+      target={newTab ? '_blank' : undefined}
       data-testid="fork-me"
     >
       <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
