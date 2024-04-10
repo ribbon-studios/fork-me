@@ -6,24 +6,24 @@ import * as styles from '../ForkMe.module.scss';
 
 describe('component(ForkMe)', () => {
   it('should render the component', () => {
-    const component = render(<ForkMe slug="rain-cafe/fork-me" />);
+    const component = render(<ForkMe slug="ribbon-studios/fork-me" />);
 
     expect(component.baseElement).toBeTruthy();
   });
 
   describe('prop(slug)', () => {
     it('should support a github slug', () => {
-      const component = render(<ForkMe slug="rain-cafe/utils" side="left" />);
+      const component = render(<ForkMe slug="ribbon-studios/utils" side="left" />);
 
       const anchor = component.getByTestId('fork-me') as HTMLAnchorElement;
 
-      expect(anchor.href).toEqual(`https://github.com/rain-cafe/utils`);
+      expect(anchor.href).toEqual(`https://github.com/ribbon-studios/utils`);
     });
   });
 
   describe('prop(side)', () => {
     it('should support swapping sides', () => {
-      const component = render(<ForkMe slug="rain-cafe/fork-me" side="left" />);
+      const component = render(<ForkMe slug="ribbon-studios/fork-me" side="left" />);
 
       expect(component.getByTestId('fork-me').classList).toContain(styles.left);
     });
@@ -31,7 +31,7 @@ describe('component(ForkMe)', () => {
 
   describe('prop(backgroundColor)', () => {
     it('should support different ribbon colors', () => {
-      const component = render(<ForkMe slug="rain-cafe/fork-me" backgroundColor="white" />);
+      const component = render(<ForkMe slug="ribbon-studios/fork-me" backgroundColor="white" />);
 
       expect(component.getByTestId('fork-me').style.color).toEqual('white');
     });
@@ -39,7 +39,7 @@ describe('component(ForkMe)', () => {
 
   describe('prop(color)', () => {
     it('should support different octocat colors', () => {
-      const component = render(<ForkMe slug="rain-cafe/fork-me" color="black" />);
+      const component = render(<ForkMe slug="ribbon-studios/fork-me" color="black" />);
 
       expect(component.getByTestId('fork-me').style.fill).toEqual('black');
     });
@@ -47,7 +47,7 @@ describe('component(ForkMe)', () => {
 
   describe('prop(newTab)', () => {
     it('should default to opening in a new tab', () => {
-      const component = render(<ForkMe slug="rain-cafe/fork-me" color="black" />);
+      const component = render(<ForkMe slug="ribbon-studios/fork-me" color="black" />);
 
       const anchor = component.getByTestId('fork-me') as HTMLAnchorElement;
 
@@ -55,7 +55,7 @@ describe('component(ForkMe)', () => {
     });
 
     it('should support opening in the current tab', () => {
-      const component = render(<ForkMe slug="rain-cafe/fork-me" color="black" newTab={false} />);
+      const component = render(<ForkMe slug="ribbon-studios/fork-me" color="black" newTab={false} />);
 
       const anchor = component.getByTestId('fork-me') as HTMLAnchorElement;
 

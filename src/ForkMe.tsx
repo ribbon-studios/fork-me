@@ -4,7 +4,7 @@ export type ForkMeProps = {
   /**
    * The slug of your repository
    *
-   * @example 'rain-cafe/fork-me'
+   * @example 'ribbon-studios/fork-me'
    */
   slug: string;
 
