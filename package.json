@@ -49,6 +49,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ribbon-studios/fork-me.git"
+  },
   "engines": {
     "browsers": "last 2 years, > 1%, not dead"
   }
