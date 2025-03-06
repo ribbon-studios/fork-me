@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
@@ -41,5 +42,6 @@ export default defineConfig(({ command }) => ({
     dts({
       insertTypesEntry: true,
     }),
+    cssInjectedByJsPlugin(),
   ],
 }));
