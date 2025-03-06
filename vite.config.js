@@ -9,7 +9,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
-  base: './',
   build: {
     lib: command === 'build' && {
       entry: [resolve(__dirname, './src/index.ts')],
@@ -30,6 +29,12 @@ export default defineConfig(({ command }) => ({
   test: {
     environment: 'happy-dom',
     setupFiles: './__tests__/setup.ts',
+    include: ['./src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    coverage: {
+      reporter: ['text', 'lcovonly'],
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: ['/demo/', '**/dist/', '**/__tests__/'],
+    },
   },
   plugins: [
     react(),
