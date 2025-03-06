@@ -1,5 +1,5 @@
 import { ForkMe } from '../src';
-import * as styles from './App.module.scss';
+import * as styles from './App.module.css';
 
 export function App() {
   return (

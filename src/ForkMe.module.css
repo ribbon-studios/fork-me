@@ -3,28 +3,28 @@
   top: 0;
   display: inline-flex;
   cursor: pointer;
+}
 
-  .arm {
-    transform-origin: 130px 106px;
-  }
+.arm {
+  transform-origin: 130px 106px;
+}
 
-  .arm,
-  .body {
-    fill: currentColor;
-  }
+.arm,
+.body {
+  fill: currentColor;
+}
 
-  &:hover .arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
+.forkMe:hover .arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
 
-  &.right {
-    right: 0;
-  }
+.forkMe.right {
+  right: 0;
+}
 
-  &.left {
-    left: 0;
-    transform: scaleX(-1);
-  }
+.forkMe.left {
+  left: 0;
+  transform: scaleX(-1);
 }
 
 @keyframes octocat-wave {

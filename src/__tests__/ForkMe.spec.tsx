@@ -1,8 +1,7 @@
-import '../../global';
-
 import { render } from '@testing-library/react';
 import { ForkMe } from '../index';
-import * as styles from '../ForkMe.module.scss';
+import styles from '../ForkMe.module.css';
+import { describe, expect, it } from 'vitest';
 
 describe('component(ForkMe)', () => {
   it('should render the component', () => {

@@ -1,4 +1,4 @@
-import * as styles from './ForkMe.module.scss';
+import styles from './ForkMe.module.css';
 
 export type ForkMeProps = {
   /**
