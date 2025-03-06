@@ -15,12 +15,15 @@ export default defineConfig(({ command }) => ({
       entry: [resolve(__dirname, './src/index.ts')],
       formats: ['es', 'cjs'],
     },
-    rollupOptions: command === 'serve' && {
-      input: {
-        index: resolve(__dirname, './demo/index.html'),
-      },
-      external: Object.keys(peerDependencies),
-    },
+    rollupOptions:
+      command === 'serve'
+        ? {
+            input: {
+              index: resolve(__dirname, './demo/index.html'),
+            },
+            external: Object.keys(peerDependencies),
+          }
+        : undefined,
   },
   resolve: {
     alias: {
